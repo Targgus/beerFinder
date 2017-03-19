@@ -57,3 +57,7 @@ a {
 .listRow {
     padding-top: 5px;
 }
+
+.error {
+    padding-top: 25px;
+}

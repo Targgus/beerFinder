@@ -17,9 +17,8 @@ app.get("/results", function(req, res){
       if(!error && response.statusCode == 200) {
           var data = JSON.parse(body)
           res.render("results", {data: data})
-          console.log(response.statusCode)
       } else if (error) {
-        console.log(error)
+        console.log("no data here!")
       }
   });
 });
