@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<div class="header">
+    <h1>All Breweries</h1>
+</div>
+
+<div class="row resultList">
+    <% var count = 0 %>
+    <% data["data"].forEach(function(brewery) { %>
+        <% count += 1 %>  
+        <div class="listRow">
+        <%= brewery["brewery"]["name"] %>
+        </div>
+        <% console.log(count) %>
+    <% }) %>
+    <!--<% if(count > 0) { %>
+        <% var rndm = Math.floor(Math.random()*count) %>
+        <%= data["data"][rndm]["brewery"]["name"] %>
+        <div><a target="_blank" href="<%= data["data"][rndm]["brewery"]["website"] %>">Website</a></div>
+    <% } else { %> 
+        <div><p>No breweries around! I would suggest moving.</p></div>   
+    <% } %>-->
+</div>
+
+<div class="returnButton">
+    <a href="/">Start Over</a>
+</div>
+
+<% include partials/footer %>

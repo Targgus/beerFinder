@@ -1,0 +1,59 @@
+body {
+    background: grey;
+}
+
+.container {
+    text-align: center;
+    width: 300px
+}
+
+h1 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.header {
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    width: 50%;
+    margin: auto;
+    
+}
+
+.form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form-group {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.resultList {
+    text-align: center;
+    margin: 0 auto;
+    width: 200px
+}
+
+.returnButton {
+    margin-top: 50px;
+    text-align: center;   
+}
+
+.buttonDiv {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+a {
+    color: midnightblue;
+    font-size: 20px;
+}
+
+.listRow {
+    padding-top: 5px;
+}
