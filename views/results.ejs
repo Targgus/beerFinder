@@ -1,7 +1,7 @@
 <% include partials/header %>
 
-<div class="header">
-    <h1>random brewery</h1>
+<div class="randomHeader">
+    <h2>random brewery</h2>
 </div>
 
 <div class="resultList">
@@ -12,7 +12,7 @@
     
     <% var rndm = Math.floor(Math.random()*count) %>
     <div><a target="_blank" href="<%= data["data"][rndm]["brewery"]["website"] %>"><%= data["data"][rndm]["brewery"]["name"] %></a></div>
-    
+    <div></div>
 </div>
 
 <div class="returnButton">
