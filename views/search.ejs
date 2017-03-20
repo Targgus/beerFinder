@@ -1,35 +1,23 @@
 <% include partials/header %>
 
     <container>
-        <h1>Brewery Finder</h1>
+        <h1>brewery finder</h1>
     <div class="header">
-        <p>Do you need help finding a local brewery? 
-            Search for your city and state below, press the "Random" button, and have a random
-            one selected! Or select the "List All" and show available breweries in the area.</p>
+        <p>Do you need help finding a local brewery?</p>
+        <p>Search for your city and state below, press the <strong>Random</strong> button, and have a random
+            one selected! Or select the <strong>Show All</strong> and show available breweries in the area.</p>
     </div>
    
-<div class="row">
-    <div class="form">
-        <form  method="GET">
-            <div class="form-group">
-                <label for="cityInput"></label>
-                <input id="cityInput" type="text" name="city" placeholder="City">
-            </div>
-            <div class="form-group">
-                <label for="stateInput"></label>
-                <input id="stateInput" type="text" name="state" placeholder="State">
-            </div>
-            <div class="buttonDiv">
-                <button type="submit" class="btn btn-default" formaction="/results">Random!</button>
-                <button type="submit" class="btn btn-default" formaction="/allresults">List All</button>
-            </div>
-        </form> 
-        <!--<form action="/allresults" method="GET">
-        action="/results"
-            <button type="submit" class="btn btn-default">List All</button>
-        </form>-->
-    </div>
-</div>
+    <form  method="GET">
+        <div class="form-group">
+            <input id="cityInput" type="text" name="city" placeholder="City">
+            <input id="stateInput" type="text" name="state" placeholder="State">
+        </div>
+        <div class="buttonDiv">
+            <button type="submit" class="startOver" formaction="/results">random</button>
+            <button type="submit" class="startOver" formaction="/allresults"> show all</button>
+        </div>
+    </form> 
     </container>
 
 <% include partials/footer %>    

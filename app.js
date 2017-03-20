@@ -16,10 +16,12 @@ app.get("/results", function(req, res){
   request(url, function(error, response, body){
       if(!error && response.statusCode == 200) {
           var data = JSON.parse(body)
+          if(data["totalResults"]>0) {
           res.render("results", {data: data})
-      } else if (error) {
-        console.log("no data here!")
-      }
+      } else {
+        res.render("errorPage")
+      };
+    }
   });
 });
 
@@ -30,13 +32,14 @@ app.get("/allresults", function(req, res){
   request(url, function(error, response, body){
       if(!error && response.statusCode == 200) {
           var data = JSON.parse(body)
-          res.render("allresults", {data: data})
-          console.log(response.statusCode)
-      } else if (error) {
-        console.log(error)
+            if(data["totalResults"]>0) {
+            res.render("allresults", {data: data})
+          } else {
+            res.render("errorPage")
+          };
       }
+    })
   });
-});
 
 app.listen(3000, function(){
   console.log("Server Online")
