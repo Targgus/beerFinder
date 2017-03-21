@@ -41,6 +41,10 @@ app.get("/allresults", function(req, res){
     })
   });
 
-app.listen(5000, function(){
-  console.log("Server Online")
+// app.listen(5000, function(){
+//   console.log("Server Online")
+// })
+
+app.listen(process.env.PORT || 5000, function(){
+  console.log("server online")
 })
